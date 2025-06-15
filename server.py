@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from flask import Flask, render_template, request
 from Maths.mathematics import summation, subtraction, multiplication
 
@@ -35,4 +38,4 @@ def render_index_page():
     return render_template('index.html')
     
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(debug=True)
